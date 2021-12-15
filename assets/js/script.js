@@ -1,22 +1,47 @@
 
-var fullDate = moment().format('dddd MMMM Do YYYY')
+var fullDate = moment().format('dddd MMMM Do YYYY h:mm:ss')
 var curdayTxt = $('#currentDay')
 var curHour = moment().format('h')
-curdayTxt.text(fullDate)
-console.log(curHour);
-var timeFrame = $('.culTime')
-var time2 = $('.culTime[data-time]')
+var milHours = moment().format('H')
+var milEl = $('.culTime[data-milTime]')
+// test
+var testTime = 13
+// test
 
-console.log(time2);
+jQuery.each(milEl,function(i,el){
+    
+    var elTime = el.getAttribute('data-milTime')
+    if(elTime > testTime){
+        el.parentNode.classList.add('bg-success')    
+    }else if(elTime == testTime){
+        $( `.culTime[data-milTime= ${testTime}]` ).parent().addClass('bg-danger');
+    }
+})
 
+// time of day text update
+function update() {
+    var curTime= moment().format('dddd MMMM Do YYYY h:mm:ss a')
+    curdayTxt.text(curTime);
+    
+    jQuery.each(milEl,function(i,el){
+        var elTime = el.getAttribute('data-milTime')
+        if(elTime > milEl && milEl>9 &&milEl<18){
+            el.parentNode.classList.add('bg-success')    
+        }else if(elTime == milEl){
+            $( `.culTime[data-time= ${curHour}]` ).parent().addClass('bg-danger');
+        }
+    })
+};
+curdayTxt.ready(function(){
+    update();
+    setInterval(update, 1000);
+})
 
-console.log(timeFrame);
-for (let i = 0; i < timeFrame.length - 1; i++) {
-    const element = timeFrame.attr('data-time');
-    console.log(element);
+$(document).ready(function(){
+    // 
 
-}
-
-
-
-$( `.culTime[data-time= ${curHour}]` ).parent().addClass('bg-danger');
+    // test
+    update();
+    setInterval(update, 1000);
+    
+})
