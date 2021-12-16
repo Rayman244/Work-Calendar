@@ -23,7 +23,16 @@ jQuery.each(inputEl,function(i,el){
     el.value = holderTxt
     
 })
-
+// test
+var testTime = 13
+jQuery.each(milEl,function(i,el){
+    var elTime = el.getAttribute('data-milTime')
+    if(elTime > testTime){
+        el.parentNode.classList.add('bg-success')    
+    }else if(elTime == testTime){
+        $( `.culTime[data-milTime= ${testTime}]` ).parent().addClass('bg-danger');
+    }
+})
 
 // time of day text update
 function update() {
