@@ -8,16 +8,15 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
+   
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/styles.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -35,9 +34,8 @@
         <div
           class="
           culTime
-            col
+            col-2
             align-self-center
-            text-center
             border-right border-dark
             text-light
           "
@@ -46,12 +44,14 @@
         >
           9:00 am
         </div>
-        <div class="col-9">
-          <input class="form-control bg-secondary text-light" />
+        <form class="col-10 d-flex">
+        <div class="col-10">
+          <input class="inputEl form-control bg-secondary text-light" data-time='9'/>
         </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary btn-block">Save</button>
+        <div class="col-2">
+          <button type="submit" class="sveBtn btn btn-primary btn-block">Save</button>
         </div>
+      </form>
       </div>
 
       <!-- 10am -->
@@ -59,23 +59,24 @@
         <div
           class="
           culTime
-            col
+            col-2
             align-self-center
-            text-center
             border-right border-dark
             text-light
           "
           data-time='10'
-          data-milTime="10"
+          data-milTime = '10'
         >
-         10:00 am
+          10:00 am
         </div>
-        <div class="col-9">
-          <input class="form-control bg-secondary text-light" />
+        <form class="col-10 d-flex">
+        <div class="col-10">
+          <input class="inputEl form-control bg-secondary text-light" data-time='10'/>
         </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary btn-block">Save</button>
+        <div class="col-2">
+          <button type="submit" class="sveBtn btn btn-primary btn-block">Save</button>
         </div>
+      </form>
       </div>
 
       <!-- 11am -->
@@ -83,23 +84,24 @@
         <div
           class="
           culTime
-            col
+            col-2
             align-self-center
-            text-center
             border-right border-dark
             text-light
           "
           data-time='11'
-          data-milTime="11"
+          data-milTime = '11'
         >
           11:00 am
         </div>
-        <div class="col-9">
-          <input class="form-control bg-secondary text-light" />
+        <form class="col-10 d-flex">
+        <div class="col-10">
+          <input class="inputEl form-control bg-secondary text-light" data-time='11'/>
         </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary btn-block">Save</button>
+        <div class="col-2">
+          <button type="submit" class="sveBtn btn btn-primary btn-block">Save</button>
         </div>
+      </form>
       </div>
 
       <!-- 12pm -->
@@ -107,23 +109,24 @@
         <div
           class="
           culTime
-            col
+            col-2
             align-self-center
-            text-center
             border-right border-dark
             text-light
           "
           data-time='12'
-          data-milTime="12"
+          data-milTime = '12'
         >
           12:00 pm
         </div>
-        <div class="col-9">
-          <input class="form-control bg-secondary text-light" />
+        <form class="col-10 d-flex">
+        <div class="col-10">
+          <input class="inputEl form-control bg-secondary text-light" data-time='12'/>
         </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary btn-block">Save</button>
+        <div class="col-2">
+          <button type="submit" class="sveBtn btn btn-primary btn-block">Save</button>
         </div>
+      </form>
       </div>
 
       <!-- 1pm -->
@@ -131,23 +134,24 @@
         <div
           class="
           culTime
-            col
+            col-2
             align-self-center
-            text-center
             border-right border-dark
             text-light
           "
           data-time='1'
-          data-milTime="13"
+          data-milTime = '13'
         >
           1:00 pm
         </div>
-        <div class="col-9">
-          <input class="form-control bg-secondary text-light" />
+        <form class="col-10 d-flex">
+        <div class="col-10">
+          <input class="inputEl form-control bg-secondary text-light" data-time='1'/>
         </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary btn-block">Save</button>
+        <div class="col-2">
+          <button type="submit" class="sveBtn btn btn-primary btn-block">Save</button>
         </div>
+      </form>
       </div>
 
       <!-- 2pm -->
@@ -155,23 +159,24 @@
         <div
           class="
           culTime
-            col
+            col-2
             align-self-center
-            text-center
             border-right border-dark
             text-light
           "
           data-time='2'
-          data-milTime="14"
+          data-milTime = '14'
         >
-       2:00 pm
+          2:00 pm
         </div>
-        <div class="col-9">
-          <input class="form-control bg-secondary text-light" />
+        <form class="col-10 d-flex">
+        <div class="col-10">
+          <input class="inputEl form-control bg-secondary text-light" data-time='2'/>
         </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary btn-block">Save</button>
+        <div class="col-2">
+          <button type="submit" class="sveBtn btn btn-primary btn-block">Save</button>
         </div>
+      </form>
       </div>
 
       <!-- 3pm -->
@@ -179,24 +184,24 @@
         <div
           class="
           culTime
-            col
+            col-2
             align-self-center
-            text-center
             border-right border-dark
             text-light
           "
           data-time='3'
-          data-milTime="15"
-          
+          data-milTime = '15'
         >
           3:00 pm
         </div>
-        <div class="col-9">
-          <input class="form-control bg-secondary text-light" />
+        <form class="col-10 d-flex">
+        <div class="col-10">
+          <input class="inputEl form-control bg-secondary text-light" data-time='3'/>
         </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary btn-block">Save</button>
+        <div class="col-2">
+          <button type="submit" class="sveBtn btn btn-primary btn-block">Save</button>
         </div>
+      </form>
       </div>
 
       <!-- 4pm -->
@@ -204,51 +209,49 @@
         <div
           class="
           culTime
-            col
+            col-2
             align-self-center
-            text-center
             border-right border-dark
             text-light
           "
           data-time='4'
-          data-milTime="16"
-        
-          >
+          data-milTime = '16'
+        >
           4:00 pm
         </div>
-        <div class="col-9">
-          <input class="form-control bg-secondary text-light" />
+        <form class="col-10 d-flex">
+        <div class="col-10">
+          <input class="inputEl form-control bg-secondary text-light" data-time='4'/>
         </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary btn-block">Save</button>
+        <div class="col-2">
+          <button type="submit" class="sveBtn btn btn-primary btn-block">Save</button>
         </div>
+      </form>
       </div>
-
       <!-- 5pm -->
       <div class="row align-content-center bg-secondary mb-1 rounded">
         <div
           class="
           culTime
-            col
+            col-2
             align-self-center
-            text-center
             border-right border-dark
             text-light
           "
           data-time='5'
-          data-milTime="17"
-        
-          >
+          data-milTime = '17'
+        >
           5:00 pm
         </div>
-        <div class="col-9">
-          <input class="form-control bg-secondary text-light" />
+        <form class="col-10 d-flex">
+        <div class="col-10">
+          <input class="inputEl form-control bg-secondary text-light" data-time='5'/>
         </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary btn-block">Save</button>
+        <div class="col-2">
+          <button type="submit" class="sveBtn btn btn-primary btn-block">Save</button>
         </div>
+      </form>
       </div>
-    </div>
 
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

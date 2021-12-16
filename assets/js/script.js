@@ -1,31 +1,41 @@
 
 var fullDate = moment().format('dddd MMMM Do YYYY h:mm:ss')
 var curdayTxt = $('#currentDay')
-var curHour = moment().format('h')
-var milHours = moment().format('H')
 var milEl = $('.culTime[data-milTime]')
-// test
-var testTime = 13
-// test
+var inputEl = $('.inputEl')
+var saveButton = $('.sveBtn')
 
-jQuery.each(milEl,function(i,el){
+//saveBtn Clicked
+saveButton.on('click',function(e){
+    e.preventDefault()
+    var inputText = e.target.parentNode.parentNode[0].value
+    var timeFrame = e.target.parentNode.parentNode[0].getAttribute('data-time')
+    localStorage.setItem(timeFrame, inputText)
+    console.log(timeFrame);
     
-    var elTime = el.getAttribute('data-milTime')
-    if(elTime > testTime){
-        el.parentNode.classList.add('bg-success')    
-    }else if(elTime == testTime){
-        $( `.culTime[data-milTime= ${testTime}]` ).parent().addClass('bg-danger');
-    }
+    console.log(inputText);
 })
+jQuery.each(inputEl,function(i,el){
+    var att = el.getAttribute('data-time')
+    var holderTxt = localStorage.getItem(att)
+    console.log(holderTxt);
+    el.classList.add('placeholder')
+    el.value = holderTxt
+    
+})
+
 
 // time of day text update
 function update() {
     var curTime= moment().format('dddd MMMM Do YYYY h:mm:ss a')
+    var curHour = moment().format('h')
+    var milHours = moment().format('H')
+    
     curdayTxt.text(curTime);
     
     jQuery.each(milEl,function(i,el){
         var elTime = el.getAttribute('data-milTime')
-        if(elTime > milEl && milEl>9 &&milEl<18){
+        if(elTime > milHours && milHours > 9 && milHours < 18){
             el.parentNode.classList.add('bg-success')    
         }else if(elTime == milEl){
             $( `.culTime[data-time= ${curHour}]` ).parent().addClass('bg-danger');
